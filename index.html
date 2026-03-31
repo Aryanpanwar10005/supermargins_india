@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
 body {
   font-family: var(--sans);
@@ -541,7 +541,7 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
   .marquee { padding: 9px 0; }
 
   .hero { padding: 2.5rem 1rem; }
-  .hero-headline { font-size: clamp(2.2rem, 12vw, 3.5rem); line-height: 1.05; }
+  .hero-headline { font-size: clamp(1.8rem, 12vw, 3.5rem); line-height: 1.05; }
   .hero-subline { font-size: 1rem; }
   .hero-desc { font-size: 0.88rem; line-height: 1.75; }
 
@@ -577,7 +577,7 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
 
   /* Stats — single column */
   .stats-strip {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .stat-cell { padding: 1.2rem 0.75rem; }
   .stat-num { font-size: 1.5rem; }
