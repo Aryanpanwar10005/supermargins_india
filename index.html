@@ -497,8 +497,6 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
   .hero-headline { font-size: 2.5rem; }
   .stats-strip { grid-template-columns: 1fr !important; }
   .what-grid { grid-template-columns: 1fr !important; }
-  .cd-box { padding: 10px; }
-  .cd-num { font-size: 1.8rem; }
 
   /* Stats */
   .stat-cell { padding: 1.5rem 1rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -513,11 +511,13 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
     padding: 1rem;
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 0.4rem;
   }
   .nav-logo img { height: 30px; }
-  .nav-right { gap: 0.6rem; flex-wrap: nowrap; }
-  .nav-link { display: none; } 
+  .nav-right { gap: 0.6rem; flex-wrap: wrap; justify-content: flex-start; margin-top: 0.5rem; }
+  /* .nav-link is kept visible to match the reference images on mobile */
   .nav-tag {
     font-size: 0.6rem;
     padding: 0 12px;
@@ -537,16 +537,13 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
   .coming-soon-badge { font-size: 0.65rem; padding: 6px 14px; gap: 7px; margin-bottom: 1.4rem; }
   .badge-dot { width: 7px; height: 7px; }
 
-  /* Countdown — horizontal row, compact */
+  /* Countdown — 2x2 grid inherited from 768px breakpoint */
   .countdown {
-    display: flex;
-    gap: 0.4rem;
-    margin-bottom: 2rem;
-    justify-content: center;
+    margin-bottom: 2.5rem;
   }
-  .cd-box { min-width: 64px; padding: 1rem 0.6rem; border-radius: 6px; }
-  .cd-num { font-size: 1.9rem; }
-  .cd-unit { font-size: 0.55rem; margin-top: 4px; }
+  .cd-box { min-width: unset; padding: 1.2rem 1rem; border-radius: 6px; }
+  .cd-num { font-size: 2.4rem; }
+  .cd-unit { font-size: 0.65rem; margin-top: 4px; letter-spacing: 2px; }
 
   /* Form — full width, larger touch targets */
   .signup-title { font-size: 0.72rem; margin-bottom: 1rem; }
