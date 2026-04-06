@@ -482,6 +482,15 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
 
   .form-row { flex-direction: column; gap: 0.6rem; }
   .form-input, .form-select, .btn-submit { height: 48px !important; }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-right { flex-direction: column; align-items: center; gap: 1rem; }
+  .footer-link { padding: 8px 20px; display: inline-flex; align-items: center; min-height: 44px; }
 }
 
 @media (max-width: 480px) {
@@ -497,19 +506,6 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
   
   .what-card { padding: 1.8rem 1.4rem; }
   
-  footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-    padding-left: max(1.5rem, env(safe-area-inset-left));
-    padding-right: max(1.5rem, env(safe-area-inset-right));
-    padding-bottom: max(2rem, env(safe-area-inset-bottom));
-    padding-top: 2rem;
-  }
-  .footer-right { flex-direction: column; align-items: center; gap: 1rem; }
-  .footer-link { padding: 12px 20px; min-height: 44px; display: inline-flex; align-items: center; }
-
   /* Hide all rings on mobile — perf win */
   .ring, .ring-center { display: none; }
 
@@ -517,9 +513,10 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
     padding: 1rem;
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
+    flex-wrap: nowrap;
   }
   .nav-logo img { height: 30px; }
-  .nav-right { gap: 0.6rem; }
+  .nav-right { gap: 0.6rem; flex-wrap: nowrap; }
   .nav-link { display: none; } 
   .nav-tag {
     font-size: 0.6rem;
@@ -556,13 +553,14 @@ footer { padding-left: max(4rem, env(safe-area-inset-left)); padding-right: max(
   .form-input, .form-select {
     width: 100%;
     font-size: 16px; /* prevents iOS zoom on focus */
-    padding: 15px 14px;
+    height: 48px;
+    padding: 0 14px;
     border-radius: 6px;
   }
   .btn-submit {
     font-size: 0.9rem;
-    padding: 16px;
-    min-height: 56px; /* comfortable touch target */
+    min-height: 48px; /* comfortable touch target */
+    padding: 0 16px;
     border-radius: 6px;
   }
   .form-note { font-size: 0.62rem; }
